@@ -1,3 +1,8 @@
+<?php
+   include_once 'includes/dbh.inc.php';
+   // la variable qui contient la connexion:
+   // $connexion
+?>
 
 <!DOCTYPE html>
 <html lang="en">
