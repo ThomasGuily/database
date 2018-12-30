@@ -70,6 +70,11 @@
                             <h4 class="card-title">
                                 <a href="#">Project One</a>
                             </h4>
+                            <?php
+                              $my_button = $_POST['origin.id'];
+                              $my_origin = $_POST['origin.file'];
+                              echo "<p>$my_button, $my_origin</p>";
+                            ?>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
                         </div>
                     </div>

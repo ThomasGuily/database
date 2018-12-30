@@ -15,6 +15,12 @@
     <meta name="author" content="">
     <script type="text/javascript" src="js/send_button_info.js" ></script>
 
+    <script>
+    // This constants will enable knowing where the user came from.
+      const url      = window.location.pathname;
+      const filename = url.substring(url.lastIndexOf('/')+1);
+    </script>
+
     <title>Shop Homepage - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
