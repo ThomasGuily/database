@@ -49,7 +49,7 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Connexion</a>
+                        <a class="nav-link" href="login.php">Connexion</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Mon panier</a>
