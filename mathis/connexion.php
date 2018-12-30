@@ -7,7 +7,11 @@ $password = $_POST["Password"];
 #echo "Username : ".$username;
 #echo "<br>";
 #echo "password : ".$password;
-$result = $mysqli->query("SELECT `Mdp` FROM `client` WHERE `Identifiant`='$username' ");
+$result = $mysqli->query("SELECT `Mdp` FROM `Client` WHERE `Identifiant`='$username' ;");
+# Temp:
+  #$couilles = var_dump($result);
+  #echo "<p> $couilles </p>";
+# End temp.
 #var_dump($result);
 $row = mysqli_fetch_row($result);
 if(mysqli_num_rows($result)==0){ 
@@ -15,16 +19,17 @@ if(mysqli_num_rows($result)==0){
     echo "<script> location.href='login.html'; </script>";
         exit;
 	} 
-else{ 
-	#while ($row = mysqli_fetch_assoc($result)) {
-     	#print_r ($row);}
+#else{ 
+#	while ($row = mysqli_fetch_assoc($result)) {
+#     	print_r ($row);}
 	if ($row[0] == $password){
 		echo "<script> location.href='index.php'; </script>";
-        exit;}
+        exit;
+        }
     else {
     	echo 'Bad password !' ;
     	echo "<script> location.href='login.html'; </script>";
         exit;
     }
-}
+#}
 ?>
