@@ -24,8 +24,10 @@
 <body>
 
   <!-- Début navigation -->
-
+$verify
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    
+      
         <div class="container">
             <a class="navbar-brand" href="#">BioCycle</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,10 +58,12 @@
             </div>
         </div>
     </nav>
-
+  
     <!-- Fin navigation  -->
-
+    <?php
+    $verify = FALSE ;
     <div class="login-page">
+      if ($verify = FALSE ) {
       <div class="form">
         <form action= 'connexion.php' method = 'post'>
           <input type="text" placeholder="Username" name = "Username"/>
@@ -67,8 +71,12 @@
           <input type="submit" value ="Connnexion"/>
           <p class="message">Not registered? <a href="#">Create an account</a></p>
         </form>
-      </div>
-    </div>
+      </div>}
+      if ($verify = TRUE ) {
+        
+      }
 
+    </div>
+    ?>
 </body>
 </html>
