@@ -18,6 +18,10 @@
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/4-col-portfolio.css" rel="stylesheet">
+    <?php
+      $option    = $_GET['button'];
+      $my_origin = $_GET['origin'];
+    ?>
 </head>
 
 <body>
@@ -60,7 +64,7 @@
             <!-- Page Heading -->
             <h1 class="my-4">
                 Page Heading
-                <small>Secondary Text</small>
+                <small><?php echo "$option"; ?></small>
             </h1>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
