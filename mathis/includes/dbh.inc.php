@@ -5,9 +5,9 @@
    $dBPassword = "";
    $dBName     = "BioCycle";
    
-   $conection = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
+   $connexion = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
    
-   if (!$connection) {
+   if (!$connexion) {
       die("Connection failed: ".mysqli_conect_error());
    }
 
