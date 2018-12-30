@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Notre entreprise</a>
+                        <a class="nav-link" href="notreentreprise.html">Notre entreprise</a>
                     </li>
                     
                     <li class="nav-item">
