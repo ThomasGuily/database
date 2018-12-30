@@ -11,9 +11,9 @@
 
                 <h1 class="my-4"></h1> <!-- Encore rajouter le nom-->
                 <div class="list-group">
-                    <a href="pagevente1.html" class="list-group-item">Viandes</a>
+                    <a href="pagevente1.html" class="list-group-item">Viandes/Poissons/Oeufs</a>
                     <a href="pagevente1.html" class="list-group-item">Laitages</a>
-                    <a href="pagevente1.html" class="list-group-item">Poissons</a>
+                    <a href="pagevente1.html" class="list-group-item">Céréales</a>
                     <a href="pagevente1.html" class="list-group-item">Boissons</a>
 
                 </div>
