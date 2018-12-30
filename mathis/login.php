@@ -1,5 +1,6 @@
 ﻿
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
 <body>
 
   <!-- Début navigation -->
-$verify
+
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     
       
@@ -62,21 +63,51 @@ $verify
     <!-- Fin navigation  -->
     <?php
     $verify = FALSE ;
+    $mysqli = new mysqli("localhost", "root", "", "biocycle");
+    $username ="";
+    $password ="";
+    ?>
+
     <div class="login-page">
-      if ($verify = FALSE ) {
+      <?php
+      if ($verify == 0 ): 
+        endif; 
+      ?>
       <div class="form">
-        <form action= 'connexion.php' method = 'post'>
+        <form action= '' method = 'post'>
           <input type="text" placeholder="Username" name = "Username"/>
           <input type="password" placeholder="Password" name = "Password"/>
-          <input type="submit" value ="Connnexion"/>
-          <p class="message">Not registered? <a href="#">Create an account</a></p>
+          <input type="submit" value ="Connnexion" novalidate/>
+          <p class="message">Not registered? <a href="">Create an account</a></p>
+          <?php
+          $username = $_POST["Username"];
+          $password = $_POST["Password"];
+          $result = $mysqli->query("SELECT `Mdp` FROM `Client` WHERE `Identifiant`='$username' ;");
+          $row = mysqli_fetch_row($result);
+          if (novalidate === TRUE)
+            if(mysqli_num_rows($result)==0){ 
+              echo 'Inscrivez vous !' ;
+              #echo "<script> location.href='login.php'; </script>";
+              exit;
+            } 
+            elseif ($row[0] == $password){
+              echo "<script> location.href='index.php'; </script>";
+              exit;
+            }
+            else {
+              echo 'Bad password !' ;
+              #echo "<script> location.href='login.php'; </script>";
+              exit;
+            } ?>
         </form>
-      </div>}
-      if ($verify = TRUE ) {
+      </div> 
+           
+      <?php if ($verify == 1 ) :
+      endif ;
         
-      }
-
+      
+      ?>
     </div>
-    ?>
+    
 </body>
 </html>
