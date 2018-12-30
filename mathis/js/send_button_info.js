@@ -4,6 +4,6 @@ function send_info() {
   // refName  : The button/link they clicked.
   let fileName = location.href.split("/").slice(-1); 
   let refName  = event.srcElement.id;
-  alert(fileName + ' ' + refName);
+  alert(refName);
 };
 
