@@ -64,27 +64,35 @@
     <?php
     $verify = FALSE ;
     $mysqli = new mysqli("localhost", "root", "", "biocycle");
-    $username ="";
-    $password ="";
+    
     ?>
 
     <div class="login-page">
-      <?php
-      if ($verify == 0 ): 
-        endif; 
-      ?>
+      
+      
+      
       <div class="form">
         <form action= '' method = 'post'>
           <input type="text" placeholder="Username" name = "Username"/>
           <input type="password" placeholder="Password" name = "Password"/>
-          <input type="submit" value ="Connnexion" novalidate/>
+          <input type="submit" value ="Connnexion " validate/>
           <p class="message">Not registered? <a href="">Create an account</a></p>
+
           <?php
+          
+          if (isset($_POST["Username"])){
           $username = $_POST["Username"];
           $password = $_POST["Password"];
+          }
+          else {
+          $username = "";
+          $password = "";
+          }
           $result = $mysqli->query("SELECT `Mdp` FROM `Client` WHERE `Identifiant`='$username' ;");
           $row = mysqli_fetch_row($result);
-          if (novalidate === TRUE)
+           
+          
+           
             if(mysqli_num_rows($result)==0){ 
               echo 'Inscrivez vous !' ;
               #echo "<script> location.href='login.php'; </script>";
@@ -98,15 +106,13 @@
               echo 'Bad password !' ;
               #echo "<script> location.href='login.php'; </script>";
               exit;
-            } ?>
+          } ?>
+
         </form>
+
       </div> 
            
-      <?php if ($verify == 1 ) :
-      endif ;
-        
       
-      ?>
     </div>
     
 </body>
