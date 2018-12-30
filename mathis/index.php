@@ -10,10 +10,10 @@
             <div class="col-lg-3">
                 <h1 class="my-4"></h1> <!-- Encore rajouter le nom-->
                 <div class="list-group">
-                    <a onCLick="send_info()" href="pagevente.php" class="list-group-item">Viandes/Poissons/Oeufs</a>
-                    <a href="pagevente.php" class="list-group-item">Laitages</a>
-                    <a href="pagevente.php" class="list-group-item">Céréales</a>
-                    <a href="pagevente.php" class="list-group-item">Boissons</a>
+                    <a id="meat"    onCLick="send_info(this.id)" href="pagevente.php" class="list-group-item">Viandes/Poissons/Oeufs</a>
+                    <a id="milk"    onClick="send_info(this.id)" href="pagevente.php" class="list-group-item">Laitages</a>
+                    <a id="cereals" onClick="send_info(this.id)" href="pagevente.php" class="list-group-item">Céréales</a>
+                    <a id="drinks"  onClick="send_info(this.id)" href="pagevente.php" class="list-group-item">Boissons</a>
                 </div>
             </div>
             <!-- /.col-lg-3 -->
