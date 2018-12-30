@@ -10,7 +10,7 @@
             <div class="col-lg-3">
                 <h1 class="my-4"></h1> <!-- Encore rajouter le nom-->
                 <div class="list-group">
-                    <a href="pagevente.php" class="list-group-item">Viandes/Poissons/Oeufs</a>
+                    <a onCLick="send_info()" href="pagevente.php" class="list-group-item">Viandes/Poissons/Oeufs</a>
                     <a href="pagevente.php" class="list-group-item">Laitages</a>
                     <a href="pagevente.php" class="list-group-item">Céréales</a>
                     <a href="pagevente.php" class="list-group-item">Boissons</a>
