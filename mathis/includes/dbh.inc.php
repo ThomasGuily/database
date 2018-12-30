@@ -3,7 +3,7 @@
    $servername = "localhost";
    $dBUsername = "root";
    $dBPassword = "";
-   $dBName     = "BioCycle";
+   $dBName     = "biocycle";
    
    $connexion = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
    

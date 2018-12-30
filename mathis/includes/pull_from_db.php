@@ -13,7 +13,6 @@
       echo $row['{column_name}'] . "<br>";
     }
   }
-
 ?>
 
 
