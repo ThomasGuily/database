@@ -18,6 +18,10 @@
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/4-col-portfolio.css" rel="stylesheet">
+    <?php
+      $option    = $_GET['button'];
+      $my_origin = $_GET['origin'];
+    ?>
 </head>
 
 <body>
@@ -60,7 +64,7 @@
             <!-- Page Heading -->
             <h1 class="my-4">
                 Page Heading
-                <small>Secondary Text</small>
+                <small><?php echo "$option"; ?></small>
             </h1>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
@@ -71,8 +75,8 @@
                                 <a href="#">Project One</a>
                             </h4>
                             <?php
-                              $my_button = $_POST['origin.id'];
-                              $my_origin = $_POST['origin.file'];
+                              $my_button = $_GET['button'];
+                              $my_origin = $_GET['origin'];
                               echo "<p>$my_button, $my_origin</p>";
                             ?>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
