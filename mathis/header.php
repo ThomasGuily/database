@@ -1,7 +1,10 @@
 <?php
    include_once 'includes/dbh.inc.php';
+   include_once 'includes/dbh.class.php';
+   //include_once 'panier.class.php';
    // la variable qui contient la connexion:
    // $connexion
+
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +25,8 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
-    <link href="css/login.css" rel="stylesheet"
-   <script src="js/login.js"></script>
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/login.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

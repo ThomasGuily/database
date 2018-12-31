@@ -21,7 +21,7 @@ class DB{
   
       try 
       {
-        $this->db = new PDO('msql:host='.$this->host.';dbname='.$this->database, 
+        $this->db = new PDO('mysql:dbname='.$this->database.';host='.$this->host, 
                             $this->username, $this->password, 
                             array(
                                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8',
