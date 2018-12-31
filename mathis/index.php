@@ -1,8 +1,6 @@
 <?php 
     require 'header.php'; 
-    $req = $DB->db->prepare('SELECT * FROM produit');
-    $req->execute();
-    var_dump($req->fetchAll())
+  
 ?>
     <!-- Page Content -->
     <div class="container">
@@ -73,11 +71,14 @@
                                 </h4>
                                 
                                 <h5>$24.99</h5>
-                                
-                                <p class="card-text">blablabla</p>
+
+                                <?php $products = $DB->query('SELECT * FROM Produit');?>
+                                <?php foreach( $products as $product); ?>
+                                <p class="card-text"><?php echo $product->Nom_produit; ?></p>
+
                                 <a class="add" href="#">
                                 ajouter au panier
-                                </a> <!--bouton ajouter au panier-->
+                                </a> 
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
