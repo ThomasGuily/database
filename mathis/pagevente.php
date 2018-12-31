@@ -20,6 +20,7 @@
     <link href="css/4-col-portfolio.css" rel="stylesheet">
     <?php
       include_once 'includes/dbh.inc.php';
+      include_once 'includes/dbh.class.php';
       // la variable qui contient la connexion:
       // $connexion
 
