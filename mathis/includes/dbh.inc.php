@@ -17,7 +17,7 @@
   //}
   // NOUVELLE (PDO):
   try {
-    $base = new PDO($dns, $dBUsername, $dBPassword);
+    $connexion = new PDO($dns, $dBUsername, $dBPassword);
   }
   catch (Exception $e){
     die('Erreur:'.$e->getMessage());

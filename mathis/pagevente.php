@@ -50,6 +50,12 @@
                           ON Produit.ID_typeproduit=Type_Produit.ID_typeproduit in 
                           (SELECT ID_typeproduit FROM Type_Produit WHERE Type_Produit.Nom_typeproduit='$pageHeading');";
           break;
+        case "fruits":
+          $pageHeading = 'Fruits et Légumes';
+          $requete     = "SELECT * FROM Produit INNER JOIN Type_Produit 
+                          ON Produit.ID_typeproduit=Type_Produit.ID_typeproduit in 
+                          (SELECT ID_typeproduit FROM Type_Produit WHERE Type_Produit.Nom_typeproduit='Fruits et Legumes');";
+          break;
         default:
           die("$option seems to be missing");
       }
@@ -101,14 +107,16 @@
             </h1>
             <div class="row">
             <?php
-            while($row = mysqli_fetch_aray($result))
+
+            $result = mysqli_query($connexion, $requete);
+            while($row = mysqli_fetch_array($result))
             {
               echo  "<div class=\"col-lg-3 col-md-4 col-sm-6 portfolio-item\">";
               echo      "<div class=\"card h-100\">";
               echo          "<a href=\"#\"><img class=\"card-img-top\" src=\"http://placehold.it/700x400\" alt=\"\"></a>";
               echo          "<div class=\"card-body\">";
               echo              "<h4 class=\"card-title\">";
-              echo                  "<a href=\"#\">$row['marchand']</a>";
+              echo                  "<a href=\"#\"> $row </a>";
               echo              "</h4>";
               echo              "<p class=\"card-text\"> Lorem ipsum dolor sit amet </p>";
               echo          "</div>";
