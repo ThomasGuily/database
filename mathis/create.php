@@ -79,26 +79,30 @@
           <p class="message">Already registered? <a href = 'login.php' > Log In  </a></p>
           <?php
           
-          if (isset($_POST["Username"]) OR isset($_POST["Name"]) OR isset($_POST["Surname"]) OR isset($_POST["Password"]) ){
-          $username = $_POST["Username"];
-          $password = $_POST["Password"];
-          $name = $_POST["Name"];
-          $surname = $_POST["Surname"];
-          $sql = "INSERT INTO Client (Nom, Prenom, Identifiant, Mdp)
-          VALUES ('$name', '$surname', '$username','$password')";
+          if (!empty ($_POST["Username"]) AND !empty ($_POST["Password"]) AND !empty ($_POST["Name"]) AND !empty ($_POST["Surname"])){
+                
+                  $username = $_POST["Username"];
+                  $password = $_POST["Password"];
+                  $name = $_POST["Name"];
+                  $surname = $_POST["Surname"];
+                  $sql = "INSERT INTO Client (Nom, Prenom, Identifiant, Mdp)
+                  VALUES ('$name', '$surname', '$username','$password');";
 
-          if ($mysqli->query($sql) === TRUE) {
-            echo "New record created successfully";
-          } 
-          else {
-           echo "Error: " . $sql . "<br>" . $mysqli->error;
+                  if ($mysqli->query($sql) === TRUE) {
+                    echo "Votre Compte a été créé !";
+                  } 
+                  else {
+                    echo "Error: " . $sql . "<br>" . $mysqli->error;
+                  }
+          
           }
-          }
+
           else {
           $username = "";
           $password = "";
           $name = "" ;
           $surname ="" ;
+          
           } 
 
           $mysqli->close();
