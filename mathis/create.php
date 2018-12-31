@@ -1,6 +1,3 @@
-﻿
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -65,7 +62,8 @@
     $verify = false ;
     $mysqli = new mysqli("localhost", "root", "", "biocycle");
     if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error); } ?>
+    die("Connection failed: " . $mysqli->connect_error);
+}?>
   
     <div class="login-page">
       
@@ -73,43 +71,46 @@
       
       <div class="form">
         <form action= '' method = 'post'>
+          <input type="text" placeholder="Name" name = "Name"/>
+          <input type="text" placeholder="Surname" name = "Surname"/>
           <input type="text" placeholder="Username" name = "Username"/>
           <input type="password" placeholder="Password" name = "Password"/>
-          <input type="submit" value ="Connnexion " validate/>
-          <p class="message">Not registered? <a href = 'create.php' > Create Account  </a></p>
+          <input type="submit" value ="Submit" validate/>
+          <p class="message">Already registered? <a href = 'login.php' > Log In  </a></p>
           <?php
           
-          if (isset($_POST["Username"])){
-          $username = $_POST["Username"];
-          $password = $_POST["Password"];
+          if (!empty ($_POST["Username"]) AND !empty ($_POST["Password"]) AND !empty ($_POST["Name"]) AND !empty ($_POST["Surname"])){
+                
+                  $username = $_POST["Username"];
+                  $password = $_POST["Password"];
+                  $name = $_POST["Name"];
+                  $surname = $_POST["Surname"];
+                  $sql = "INSERT INTO Client (Nom, Prenom, Identifiant, Mdp)
+                  VALUES ('$name', '$surname', '$username','$password');";
+
+                  if ($mysqli->query($sql) === TRUE) {
+                    echo "Votre Compte a été créé !";
+                  } 
+                  else {
+                    echo "Error: " . $sql . "<br>" . $mysqli->error;
+                  }
           
           }
+
           else {
           $username = "";
           $password = "";
-          }
-          $result = $mysqli->query("SELECT `Mdp` FROM `Client` WHERE `Identifiant`='$username' ;");
-
-          $row = mysqli_fetch_row($result);
+          $name = "" ;
+          $surname ="" ;
           
-          
-           
-            if(mysqli_num_rows($result)==0){ 
-              echo 'Inscrivez vous !' ;
-              #echo "<script> location.href='login.php'; </script>";
-              exit;
-            } 
-            elseif ($row[0] == $password){
-              echo "<script> location.href='index.php'; </script>";
-              exit;
-            }
-            else {
-              echo 'Bad password !' ;
-              #echo "<script> location.href='login.php'; </script>";
-              exit;
-          }$mysqli->close(); ?>
+          } 
 
-        </form>
+          $mysqli->close();
+
+
+
+          ?>
+          </form>
 
       </div> 
            

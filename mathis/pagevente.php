@@ -21,6 +21,22 @@
     <?php
       $option    = $_GET['button'];
       $my_origin = $_GET['origin'];
+      switch ($option) {
+        case "meat":
+          $pageHeading = 'Viandes/Poissons/Oeufs';
+          break;
+        case "milk":
+          $pageHeading = 'Laitages';
+          break;
+        case "cereals":
+          $pageHeading = 'Céréales';
+          break;
+        case "drinks":
+          $pageHeading = 'Boissons';
+          break;
+        default:
+          die("$option seems to be missing");
+      }
     ?>
 </head>
 
@@ -63,8 +79,8 @@
         <div class="container">
             <!-- Page Heading -->
             <h1 class="my-4">
-                Page Heading
-                <small><?php echo "$option"; ?></small>
+                <?php echo "$pageHeading"; ?>
+                <small> Hola </small>
             </h1>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
