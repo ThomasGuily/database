@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Notre entreprise</a>
+                        <a class="nav-link" href="notreentreprise.html">Notre entreprise</a>
                     </li>
                     
                     <li class="nav-item">
@@ -52,9 +52,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Connexion</a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="#">Mon panier</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>

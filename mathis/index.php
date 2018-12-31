@@ -1,7 +1,5 @@
 <?php require 'header.php'; ?>
 
-
-
     <!-- Page Content -->
     <div class="container">
 
