@@ -6,7 +6,7 @@ class DB{
   private $username = 'root';
   private $password = '';
   private $database = 'biocycle';
-  public $db;
+  private $db;
 
   public function __construct($host = null, $username = null,
                               $password = null, $database = null) 

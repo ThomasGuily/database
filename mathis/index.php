@@ -62,19 +62,18 @@
                    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit1.JPG" alt=""></a>
+                            <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 1 ');?>
+                            <?php foreach( $products as $product); ?>
+                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-
-            
-                                    <a href="#">Item one</a>
+                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
                                 
-                                <h5>$24.99</h5>
+                                <h5><?php echo $product->Prix; ?> € </h5>
 
-                                <?php $products = $DB->query('SELECT * FROM Produit');?>
-                                <?php foreach( $products as $product); ?>
-                                <p class="card-text"><?php echo $product->Nom_produit; ?></p>
+                                
+                                <p class="card-text"></p>
 
                                 <a class="add" href="#">
                                 ajouter au panier
@@ -86,14 +85,18 @@
                         </div>
                     </div>
 
+<!--ITEM 2-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 2 ');?>
+                            <?php foreach( $products as $product); ?>
+                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Two</a>
+                                
+                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
-                                <h5>$24.99</h5>
+                                <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
                             </div>
                             <div class="card-footer">
@@ -101,15 +104,18 @@
                             </div>
                         </div>
                     </div>
-
+<!--ITEM 3-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 3 ');?>
+                                <?php foreach( $products as $product); ?>
+                                <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Three</a>
+                                
+                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
-                                <h5>$24.99</h5>
+                                <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                             </div>
                             <div class="card-footer">
@@ -117,15 +123,18 @@
                             </div>
                         </div>
                     </div>
-
+<!--ITEM 4-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 4 ');?>
+                                <?php foreach( $products as $product); ?>
+                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Four</a>
+                                
+                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
-                                <h5>$24.99</h5>
+                                <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                             </div>
                             <div class="card-footer">
@@ -133,15 +142,18 @@
                             </div>
                         </div>
                     </div>
-
+<!--ITEM 5-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 5 ');?>
+                                <?php foreach( $products as $product); ?>
+                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Five</a>
+                                
+                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
-                                <h5>$24.99</h5>
+                                <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
                             </div>
                             <div class="card-footer">
@@ -149,15 +161,18 @@
                             </div>
                         </div>
                     </div>
-
+<!--ITEM 6-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 6 ');?>
+                                <?php foreach( $products as $product); ?>
+                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Six</a>
+                                
+                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
-                                <h5>$24.99</h5>
+                                <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                             </div>
                             <div class="card-footer">
