@@ -28,16 +28,27 @@
       switch ($option) {
         case "meat":
           $pageHeading = 'Viandes/Poissons/Oeufs';
-          $requete     = '';
+          $requete     = "SELECT * FROM Produit INNER JOIN Type_Produit 
+                          ON Produit.ID_typeproduit=Type_Produit.ID_typeproduit in 
+                          (SELECT ID_typeproduit FROM Type_Produit WHERE Type_Produit.Nom_typeproduit='$pageHeading');";
           break;
         case "milk":
-          $pageHeading = 'Laitages';
+          $pageHeading = 'Produit Latiers';
+          $requete     = "SELECT * FROM Produit INNER JOIN Type_Produit 
+                          ON Produit.ID_typeproduit=Type_Produit.ID_typeproduit in 
+                          (SELECT ID_typeproduit FROM Type_Produit WHERE Type_Produit.Nom_typeproduit='$pageHeading');";
           break;
         case "cereals":
           $pageHeading = 'Céréales';
+          $requete     = "SELECT * FROM Produit INNER JOIN Type_Produit 
+                          ON Produit.ID_typeproduit=Type_Produit.ID_typeproduit in 
+                          (SELECT ID_typeproduit FROM Type_Produit WHERE Type_Produit.Nom_typeproduit='$pageHeading');";
           break;
         case "drinks":
           $pageHeading = 'Boissons';
+          $requete     = "SELECT * FROM Produit INNER JOIN Type_Produit 
+                          ON Produit.ID_typeproduit=Type_Produit.ID_typeproduit in 
+                          (SELECT ID_typeproduit FROM Type_Produit WHERE Type_Produit.Nom_typeproduit='$pageHeading');";
           break;
         default:
           die("$option seems to be missing");
@@ -72,9 +83,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Connexion</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Mon panier</a>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>
@@ -96,7 +108,7 @@
               echo          "<a href=\"#\"><img class=\"card-img-top\" src=\"http://placehold.it/700x400\" alt=\"\"></a>";
               echo          "<div class=\"card-body\">";
               echo              "<h4 class=\"card-title\">";
-              echo                  "<a href=\"#\">Project One</a>";
+              echo                  "<a href=\"#\">$row['marchand']</a>";
               echo              "</h4>";
               echo              "<p class=\"card-text\"> Lorem ipsum dolor sit amet </p>";
               echo          "</div>";
