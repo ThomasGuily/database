@@ -9,6 +9,22 @@
 
 <head>
 
+    
+ <!-- <title>Titre de la page</title>  va falloir y passer ...-->
+  
+  <!--
+  <meta name="description" content="">  faut ajouter pour le referencement
+  <meta name="author" content=""> -->
+
+  <title>Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet"
+   <script src="js/login.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -49,10 +65,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="notreentreprise.html">Notre entreprise</a>
+                        <a class="nav-link" href="notreentreprise.php">Notre entreprise</a>
                     </li>                 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Connexion</a>
