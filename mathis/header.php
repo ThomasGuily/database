@@ -4,6 +4,7 @@
    //include_once 'panier.class.php';
    // la variable qui contient la connexion:
    // $connexion
+   $DB = new DB();
 
 ?>
 
