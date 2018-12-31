@@ -1,5 +1,7 @@
-<?php require 'header.php'; ?>
- 
+<?php 
+    require 'header.php'; 
+    $DB = new DB ;
+?>
     <!-- Page Content -->
     <div class="container">
 
@@ -57,7 +59,8 @@
                 </div>
 
                 <div class="row">
-
+                    <?php $product = $DB->query('SELECT * FROM produit');?>
+                    <?php foreach( $products as $product);?>
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#"><img class="card-img-top" src="images/pics/Image_Produit1.JPG" alt=""></a>
@@ -70,8 +73,10 @@
                                 
                                 <h5>$24.99</h5>
                                 
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                <input class="btn btn-primary" type="submit" value="Ajouter au panier"> <!--bouton ajouter au panier-->
+                                <p class="card-text"><?php echo $product->Nom_produit ;?></p>
+                                <a class="add" href="#">
+                                ajouter au panier
+                                </a> <!--bouton ajouter au panier-->
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
