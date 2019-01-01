@@ -116,7 +116,7 @@
             {
               echo  "<div class=\"col-lg-3 col-md-4 col-sm-6 portfolio-item\">";
               echo      "<div class=\"card h-100\">";
-              echo          "<a href=\"#\"><img class=\"card-img-top\" src=\"http://placehold.it/700x400\" alt=\"\"></a>";
+              echo          "<a href=\"#\"><img class=\"card-img-top\" src=\"images/pics/Image_Produit$product->ID_produit.jpg\" alt=\"\"></a>";
               echo          "<div class=\"card-body\">";
               echo              "<h4 class=\"card-title\">";
               echo                  "<a href=\"#\"> $product->Nom_produit </a>";
