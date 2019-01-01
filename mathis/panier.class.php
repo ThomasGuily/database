@@ -2,9 +2,10 @@
 #faire super gaffe qu'il n'y ait pas d'espace entre la balise php et le début et de créer un nouvel objet $panier = new panier()
 
 class panier{
-
     
-    public function __construct(){
+    private $DB;
+    
+    public function __construct($DB){
         if(!isset($_SESSION))
             { #si la variable session n'est pas activée -> var session sert de cookies pour la commande
             session_start(); #on l'initialise 
@@ -14,10 +15,11 @@ class panier{
         if(!isset($_SESSION['panier'])){
             $_SESSION['panier'] = array(); #Je crée un panier vide 
             }
-            
+        
+        $this->DB=$DB;
         }
     
-    /* public function total(){
+     public function total(){
         $total =0;
         $ids = array_keys($_SESSION['panier']);
         if(empty($ids)){
@@ -29,7 +31,7 @@ class panier{
             $total += $product->Prix * $_SESSION['panier'][$product->ID_produit];
         }
         return $total;
-    } */
+    }
 
     public function add($product_id){ #on remplis le panier de produits
        if(isset($_SESSION['panier'][$product_id])){

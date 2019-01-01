@@ -31,7 +31,7 @@
             <th scope="col">Ingrédient</th>
             <th scope="col">Prix à l'unité</th>
             <th scope="col">Quantité</th>
-            <th scope="col">Total</th>
+            <th scope="col">Supprimer l'élement</th>
             </tr>
         </thead>
     <?php foreach($products as $product): ?>
@@ -47,13 +47,22 @@
                           echo "<script> location.reload() </script>";
                       }
             ?></td>
-            <td><?php ?></td>
             <td> <a  href="panier.php?del=<?php echo $product->ID_produit;?>" class ="del"> Supprimer </a></td>
             </tr>
         </tbody>
     <?php endforeach; ?>        
         
         </table>
+
+<table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Total : <?php echo $panier->total(); ?> €</th>
+            </tr>
+        </thead>        
+        </table>
+        
+
     </div>
  </div>
 

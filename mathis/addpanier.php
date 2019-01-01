@@ -5,7 +5,7 @@
    // la variable qui contient la connexion:
    // $connexion
    $DB = new DB();
-   $panier = new panier();
+   $panier = new panier($DB);
 
    if(isset($_GET['id'])){
         $product = $DB->query('SELECT ID_produit FROM Produit WHERE ID_produit=:id' , array('id' => $_GET['id']));
