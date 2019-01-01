@@ -63,8 +63,8 @@
               echo              "<h4 class=\"card-title\">";
               echo                  "<a> $product->Nom_produit </a>";
               echo              "</h4>";
-              echo              "<h5> $product->Prix € </h5>";
-              echo              "<p class=\"card-text\"> Lorem ipsum dolor sit amet ON DEVRAIT AVOIR  LA DESCRIPTION LÀ </p>";
+              echo              "<h5> Prix: $product->Prix € </h5>";
+              echo              "<p class=\"card-text\">  </p>";
               echo              "<a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
               echo              "    ajouter au panier";
               echo              "</a>";
