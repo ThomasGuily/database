@@ -59,140 +59,33 @@
                 </div>
 
                 <div class="row">
-<!--ITEM 1-->             
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 1 ');?>
-                            <?php foreach( $products as $product); ?>
-                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a><?php echo $product->Nom_produit; ?></a>
-                                </h4>
-
-                                <h5><?php echo $product->Prix; ?> € </h5>
-                                
-                                <p class="card-text"></p>
-
-                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
-                                ajouter au panier
-                                </a> 
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-
-<!--ITEM 2-->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 2 ');?>
-                            <?php foreach( $products as $product); ?>
-                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">                               
-                                    <a><?php echo $product->Nom_produit; ?></a>
-                                </h4>
-                                <h5><?php echo $product->Prix; ?> € </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
-                                ajouter au panier
-                                </a> 
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-<!--ITEM 3-->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 3 ');?>
-                                <?php foreach( $products as $product); ?>
-                                <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                
-                                    <a><?php echo $product->Nom_produit; ?></a>
-                                </h4>
-                                <h5><?php echo $product->Prix; ?> € </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
-                                ajouter au panier
-                                </a> 
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-<!--ITEM 4-->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 4 ');?>
-                                <?php foreach( $products as $product); ?>
-                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                
-                                    <a><?php echo $product->Nom_produit; ?></a>
-                                </h4>
-                                <h5><?php echo $product->Prix; ?> € </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
-                                ajouter au panier
-                                </a> 
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-<!--ITEM 5-->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 5 ');?>
-                                <?php foreach( $products as $product); ?>
-                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                
-                                    <a><?php echo $product->Nom_produit; ?></a>
-                                </h4>
-                                <h5><?php echo $product->Prix; ?> € </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
-                                ajouter au panier
-                                </a> 
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-<!--ITEM 6-->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 6 ');?>
-                                <?php foreach( $products as $product); ?>
-                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                
-                                    <a><?php echo $product->Nom_produit; ?></a>
-                                </h4>
-                                <h5><?php echo $product->Prix; ?> € </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
-                                ajouter au panier
-                                </a> 
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
+<!--ITEM 1-->            
+<?php
+    $products = $DB->query('SELECT * FROM `Produit`;');
+    foreach( $products as $product)
+    {
+      echo   "<div class=\"col-lg-4 col-md-6 mb-4\">";
+      echo   "  <div class=\"card h-100\">";
+      echo   "    <a>";
+      echo   "     <img class=\"card-img-top\" src=\"images/pics/Image_Produit$product->ID_produit.jpg\" alt=\"\">";
+      echo   "    </a>";
+      echo   "     <div class=\"card-body\">";
+      echo   "       <h4 class=\"card-title\">";
+      echo   "         <a> $product->Nom_produit </a>";
+      echo   "       </h4>";
+      echo   "       <h5> Prix: $product->Prix € </h5>";
+      echo   "       <p class=\"card-text\"></p>";
+      echo   "         <a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
+      echo   "            Ajouter au panier";
+      echo   "         </a>";
+      echo   "     </div>";
+      echo   "     <div class=\"card-footer\">";
+      echo   "       <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>";
+      echo   "     </div>";
+      echo   "  </div>";
+      echo   "</div>";
+    }
+?>
 
                 </div>
                 <!-- /.row -->
