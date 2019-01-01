@@ -69,9 +69,8 @@
                                 <h4 class="card-title">
                                     <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
-                                
-                                <h5><?php echo $product->Prix; ?> € </h5>
 
+                                <h5><?php echo $product->Prix; ?> € </h5>
                                 
                                 <p class="card-text"></p>
 
@@ -92,8 +91,7 @@
                             <?php foreach( $products as $product); ?>
                             <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
-                                <h4 class="card-title">
-                                
+                                <h4 class="card-title">                               
                                     <a href="#"><?php echo $product->Nom_produit; ?></a>
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>

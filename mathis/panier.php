@@ -1,12 +1,26 @@
 <?php 
+
     require 'header.php'; 
-    var_dump($_SESSION);
+    #unset($_SESSION['panier']); <!--Vide le panier-->
+    #var_dump($_SESSION);
+    
+    $ids = array_keys($_SESSION['panier']);
+    #var_dump($ids);
+   
+    #echo implode(',',$ids);
+    $products = $DB->query("SELECT * FROM `Produit` WHERE `ID_produit` IN (".implode(',',$ids).")");
+    
+    #var_dump($products);
+    if(isset($_GET['del'])){
+        $panier->del($_GET['del']);
+    }
 ?>
  
 
 <br/><br/><br/><br/><br/>
 
  <div class="container">
+    
     <div class="row">
         <table class="table table-bordered">
         <thead class="thead-dark">
@@ -17,26 +31,18 @@
             <th scope="col">Total</th>
             </tr>
         </thead>
+    <?php foreach($products as $product): ?>
         <tbody>
             <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <th scope="row"><?php echo $product->Nom_produit ?></th>
+            <td><?php echo $product->Prix ?> € </td>
+            <td><?php ?></td>
+            <td><?php ?></td>
+            <td> <a href="panier.php?del=<?echo $product->id;?>" class ="del"> Supprimer </a></td>
             </tr>
         </tbody>
+    <?php endforeach; ?>        
+        
         </table>
     </div>
  </div>
