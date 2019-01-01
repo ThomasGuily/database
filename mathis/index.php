@@ -67,7 +67,7 @@
                             <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
+                                    <a><?php echo $product->Nom_produit; ?></a>
                                 </h4>
 
                                 <h5><?php echo $product->Prix; ?> € </h5>
@@ -89,10 +89,10 @@
                         <div class="card h-100">
                             <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 2 ');?>
                             <?php foreach( $products as $product); ?>
-                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
+                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">                               
-                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
+                                    <a><?php echo $product->Nom_produit; ?></a>
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
@@ -110,11 +110,11 @@
                         <div class="card h-100">
                             <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 3 ');?>
                                 <?php foreach( $products as $product); ?>
-                                <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
+                                <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                 
-                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
+                                    <a><?php echo $product->Nom_produit; ?></a>
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -132,11 +132,11 @@
                         <div class="card h-100">
                         <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 4 ');?>
                                 <?php foreach( $products as $product); ?>
-                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
+                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                 
-                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
+                                    <a><?php echo $product->Nom_produit; ?></a>
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -154,11 +154,11 @@
                         <div class="card h-100">
                         <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 5 ');?>
                                 <?php foreach( $products as $product); ?>
-                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
+                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                 
-                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
+                                    <a><?php echo $product->Nom_produit; ?></a>
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
@@ -176,11 +176,11 @@
                         <div class="card h-100">
                         <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 6 ');?>
                                 <?php foreach( $products as $product); ?>
-                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
+                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                 
-                                    <a href="#"><?php echo $product->Nom_produit; ?></a>
+                                    <a><?php echo $product->Nom_produit; ?></a>
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>

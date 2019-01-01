@@ -32,7 +32,7 @@
           $result = $mysqli->query("SELECT `Mdp` FROM `Client` WHERE `Identifiant`='$username' ;");
 
           $row = mysqli_fetch_row($result);
-          
+          $hash = $row[0];
           
            
             if(mysqli_num_rows($result)==0){ 
@@ -40,7 +40,7 @@
               #echo "<script> location.href='login.php'; </script>";
               exit;
             } 
-            elseif ($row[0] == $password){
+            elseif (password_verify($password, $hash)){
               echo "<script> location.href='index.php'; </script>";
               exit;
             }
