@@ -49,7 +49,6 @@
             <!-- Page Heading -->
             <h1 class="my-4">
                 <?php echo "$pageHeading"; ?>
-                <small> Hola </small>
             </h1>
             <div class="row">
             <?php
@@ -64,7 +63,11 @@
               echo              "<h4 class=\"card-title\">";
               echo                  "<a href=\"#\"> $product->Nom_produit </a>";
               echo              "</h4>";
-              echo              "<p class=\"card-text\"> Lorem ipsum dolor sit amet </p>";
+              echo              "<h5> $product->Prix € </h5>";
+              echo              "<p class=\"card-text\"> Lorem ipsum dolor sit amet ON DEVRAIT AVOIR  LA DESCRIPTION LÀ </p>";
+              echo              "<a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
+              echo              "    ajouter au panier";
+              echo              "</a>";
               echo          "</div>";
               echo      "</div>";
               echo  "</div>";
