@@ -62,7 +62,7 @@
                    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 1 ');?>
+                            <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 1 ');?>
                             <?php foreach( $products as $product); ?>
                             <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
@@ -88,7 +88,7 @@
 <!--ITEM 2-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 2 ');?>
+                            <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 2 ');?>
                             <?php foreach( $products as $product); ?>
                             <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
@@ -110,7 +110,7 @@
 <!--ITEM 3-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 3 ');?>
+                            <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 3 ');?>
                                 <?php foreach( $products as $product); ?>
                                 <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
@@ -132,7 +132,7 @@
 <!--ITEM 4-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                        <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 4 ');?>
+                        <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 4 ');?>
                                 <?php foreach( $products as $product); ?>
                             <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
@@ -154,7 +154,7 @@
 <!--ITEM 5-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                        <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 5 ');?>
+                        <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 5 ');?>
                                 <?php foreach( $products as $product); ?>
                             <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
@@ -176,7 +176,7 @@
 <!--ITEM 6-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                        <?php $products = $DB->query('SELECT * FROM `produit` WHERE `ID_produit` = 6 ');?>
+                        <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 6 ');?>
                                 <?php foreach( $products as $product); ?>
                             <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.JPG" alt=""></a>
                             <div class="card-body">
