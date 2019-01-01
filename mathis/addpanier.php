@@ -8,7 +8,7 @@
    $panier = new panier();
 
    if(isset($_GET['id'])){
-        $product = $DB->query('SELECT ID_produit FROM produit WHERE ID_produit=:id' , array('id' => $_GET['id']));
+        $product = $DB->query('SELECT ID_produit FROM Produit WHERE ID_produit=:id' , array('id' => $_GET['id']));
         if(empty($product)){
             die("Ce produit n'existe pas");
         }
