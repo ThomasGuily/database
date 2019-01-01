@@ -1,10 +1,11 @@
 <?php
    include_once 'includes/dbh.inc.php';
    include_once 'includes/dbh.class.php';
-   //include_once 'panier.class.php';
+   include_once 'panier.class.php';
    // la variable qui contient la connexion:
    // $connexion
    $DB = new DB();
+   $panier = new panier();
 
 ?>
 
@@ -28,7 +29,7 @@
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
     <script src="js/login.js"></script>
-
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -46,9 +47,7 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
-
+    
 </head>
 
 <body>
@@ -77,9 +76,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Connexion</a>
                     </li>
-                    <!-- <li class="nav-item"> 
-                        <a class="nav-link" href="#">Mon panier</a>
-                    </li> -->
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="panier.php">Mon panier</a>
+                    </li> 
                 </ul>
             </div>
         </div>

@@ -75,7 +75,7 @@
                                 
                                 <p class="card-text"></p>
 
-                                <a class="add" href="#">
+                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
                                 ajouter au panier
                                 </a> 
                             </div>
@@ -98,7 +98,7 @@
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                                <a class="add" href="#">
+                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
                                 ajouter au panier
                                 </a> 
                             </div>
@@ -120,7 +120,7 @@
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                <a class="add" href="#">
+                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
                                 ajouter au panier
                                 </a> 
                             </div>
@@ -142,7 +142,7 @@
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                <a class="add" href="#">
+                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
                                 ajouter au panier
                                 </a> 
                             </div>
@@ -164,7 +164,7 @@
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                                <a class="add" href="#">
+                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
                                 ajouter au panier
                                 </a> 
                             </div>
@@ -186,7 +186,7 @@
                                 </h4>
                                 <h5><?php echo $product->Prix; ?> € </h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                <a class="add" href="#">
+                                <a class="add" href="addpanier.php?id=<?php echo $product->ID_produit; ?>">
                                 ajouter au panier
                                 </a> 
                             </div>
