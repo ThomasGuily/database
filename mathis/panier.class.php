@@ -17,6 +17,9 @@ class panier{
     public function add($product_id){
         $_SESSION['panier'][$product_id]= 1;
     }
-}
 
+    public function del($product_id){
+        unset($_SESSION['panier'][$product_id]);
+    }
+}
 ?>

@@ -1,15 +1,17 @@
 <?php 
 
     require 'header.php'; 
-    #unset($_SESSION['panier']); <!--Vide le panier-->
+    #unset($_SESSION['panier']); 
     #var_dump($_SESSION);
     
     $ids = array_keys($_SESSION['panier']);
     #var_dump($ids);
-   
+    if(empty($ids)){
+        $products=array();
+    }else{ 
     #echo implode(',',$ids);
     $products = $DB->query("SELECT * FROM `Produit` WHERE `ID_produit` IN (".implode(',',$ids).")");
-    
+    }
     #var_dump($products);
     if(isset($_GET['del'])){
         $panier->del($_GET['del']);
@@ -38,7 +40,7 @@
             <td><?php echo $product->Prix ?> € </td>
             <td><?php ?></td>
             <td><?php ?></td>
-            <td> <a href="panier.php?del=<?echo $product->id;?>" class ="del"> Supprimer </a></td>
+            <td> <a href="panier.php?del=<?php echo $product->ID_produit;?>" class ="del"> Supprimer </a></td>
             </tr>
         </tbody>
     <?php endforeach; ?>        

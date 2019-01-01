@@ -64,7 +64,7 @@
                         <div class="card h-100">
                             <?php $products = $DB->query('SELECT * FROM `Produit` WHERE `ID_produit` = 1 ');?>
                             <?php foreach( $products as $product); ?>
-                            <a href="#"><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
+                            <a><img class="card-img-top" src="images/pics/Image_Produit<?php echo $product->ID_produit ;?>.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="#"><?php echo $product->Nom_produit; ?></a>
