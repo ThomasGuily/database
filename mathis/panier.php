@@ -38,7 +38,8 @@
             <tr>
             <th scope="row"><?php echo $product->Nom_produit ?></th>
             <td><?php echo $product->Prix ?> € </td>
-            <td><?php ?></td>
+            
+            <td><?php echo $_SESSION['panier'][$product->ID_produit]; ?></td>
             <td><?php ?></td>
             <td> <a href="panier.php?del=<?php echo $product->ID_produit;?>" class ="del"> Supprimer </a></td>
             </tr>

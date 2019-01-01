@@ -14,8 +14,12 @@ class panier{
             }
 
     }
-    public function add($product_id){
-        $_SESSION['panier'][$product_id]= 1;
+    public function add($product_id){ #on remplis le panier de produits
+       if(isset($_SESSION['panier'][$product_id])){
+            $_SESSION['panier'][$product_id]++;
+       }else{
+            $_SESSION['panier'][$product_id]=1;
+        }
     }
 
     public function del($product_id){
