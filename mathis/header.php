@@ -5,7 +5,7 @@
    // la variable qui contient la connexion:
    // $connexion
    $DB = new DB();
-   $panier = new panier();
+   $panier = new panier($DB);
 
 ?>
 
