@@ -82,7 +82,7 @@
           if (!empty ($_POST["Username"]) AND !empty ($_POST["Password"]) AND !empty ($_POST["Name"]) AND !empty ($_POST["Surname"])){
                 
                   $username = $_POST["Username"];
-                  $password = $_POST["Password"];
+                  $password = password_hash($_POST["Password"], PASSWORD_DEFAULT);
                   $name = $_POST["Name"];
                   $surname = $_POST["Surname"];
                   $sql = "INSERT INTO Client (Nom, Prenom, Identifiant, Mdp)
