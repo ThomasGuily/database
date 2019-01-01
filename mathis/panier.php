@@ -31,7 +31,7 @@
             <th scope="col">Ingrédient</th>
             <th scope="col">Prix à l'unité</th>
             <th scope="col">Quantité</th>
-            <th scope="col">Supprimer l'élement</th>
+            <th scope="col">Supprimer l'élément</th>
             </tr>
         </thead>
     <?php foreach($products as $product): ?>
