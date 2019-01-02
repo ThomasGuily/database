@@ -55,30 +55,33 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.php">BioCycle</a> <!--  Ajouter le nom dans le containeur-->
+            <a class="navbar-brand" href="indexconnect.php">BioCycle</a> <!--  Ajouter le nom dans le containeur-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="indexconnect.php">
                             Accueil
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="notreentreprise.php">Notre entreprise</a>
+                        <a class="nav-link" href="notreentrepriseconnect.php">Notre entreprise</a>
                     </li>                 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
+                        <a class="nav-link" href="contactconnect.php">Contact</a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="login.php">Connexion</a>
-                    </li>
-                    <!--<li class="nav-item"> 
+                    </li>-->
+                    <li class="nav-item"> 
                         <a class="nav-link" href="panier.php">Mon panier</a>
-                    </li> -->
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="index.php">Deconnexion</a>
+                    </li>
                 </ul>
             </div>
         </div>

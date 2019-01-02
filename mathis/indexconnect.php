@@ -2,7 +2,7 @@
 
 <?php 
       
-      require 'header.php';
+      require 'headerconnect.php';
     
   
 ?>
@@ -14,19 +14,19 @@
             <div class="col-lg-3">
                 <h1 class="my-4"></h1> <!-- Encore rajouter le nom-->
                 <div class="list-group">
-                    <a id="meat" href="pagevente.php?origin=index.php&button=meat" class="list-group-item">
+                    <a id="meat" href="pageventeconnect.php?origin=indexconnect.php&button=meat" class="list-group-item">
                       Viandes/Poissons/Oeufs
                     </a>
-                    <a id="milk" href="pagevente.php?origin=index.php&button=milk" class="list-group-item">
+                    <a id="milk" href="pageventeconnect.php?origin=indexconnect.php&button=milk" class="list-group-item">
                       Laitages
                     </a>
-                    <a id="cereals" href="pagevente.php?origin=index.php&button=cereals" class="list-group-item">
+                    <a id="cereals" href="pageventeconnect.php?origin=indexconnect.php&button=cereals" class="list-group-item">
                       Céréales
                     </a>
-                    <a id="drinks" href="pagevente.php?origin=index.php&button=drinks" class="list-group-item">
+                    <a id="drinks" href="pageventeconnect.php?origin=indexconnect.php&button=drinks" class="list-group-item">
                       Boissons
                     </a>
-                    <a id="Fruits et légumes" href="pagevente.php?origin=index.php&button=fruits" class="list-group-item">
+                    <a id="Fruits et légumes" href="pageventeconnect.php?origin=indexconnect.php&button=fruits" class="list-group-item">
                       Fruits et légumes
                     </a>
                 </div>
@@ -80,7 +80,7 @@
       echo   "       <h5> Prix: $product->Prix € </h5>";
       echo   "       <p class=\"card-text\"></p>";
       echo   "         <a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
-      echo   "            ";
+      echo   "            Ajouter au panier";
       echo   "         </a>";
       echo   "     </div>";
       echo   "     <div class=\"card-footer\">";

@@ -90,6 +90,10 @@
 
                   if ($mysqli->query($sql) === TRUE) {
                     echo "Votre Compte a été créé !";
+                    $bool1 = TRUE ;
+                    echo "<script> location.href='indexconnect.php'; </script>";
+                    return $bool1;
+                    exit;
                   } 
                   else {
                     echo "Error: " . $sql . "<br>" . $mysqli->error;

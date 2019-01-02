@@ -1,6 +1,6 @@
 ﻿
 <?php
-    require "header.php";
+    require "headerconnect.php";
 ?>
 
 
@@ -51,7 +51,6 @@
                 <?php echo "$pageHeading"; ?>
             </h1>
             <div class="row">
-            
             <?php
 
             $products = $DB->query($requete);
@@ -67,13 +66,13 @@
               echo              "<h5> Prix: $product->Prix € </h5>";
               echo              "<p class=\"card-text\">  </p>";
               echo              "<a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
-              echo              "";
+              echo              "    ajouter au panier";
               echo              "</a>";
               echo          "</div>";
               echo      "</div>";
               echo  "</div>";
             } 
-            ?>   
+            ?>
             </div>
             <!-- /.row -->
             <!-- Pagination -->

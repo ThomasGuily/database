@@ -1,6 +1,6 @@
 <?php 
 
-    require 'header.php'; 
+    require 'headerconnect.php'; 
     #unset($_SESSION['panier']); 
     #var_dump($_SESSION);
     
