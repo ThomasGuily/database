@@ -78,7 +78,7 @@
                 <div class="col-lg-6">
                     <div class="p-5">
                         <h2 class="display-4">Gustavo Magaña López</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                        <p> Étudiant d'échange venant du Mexique. Formation: Licence en ingénierie biomédicale. Séjour </p>
                     </div>
                 </div>
             </div>
