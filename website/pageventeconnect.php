@@ -40,7 +40,7 @@
                           ON Produit.ID_typeproduit=aux.ID_typeproduit;"; 
           break;
         default:
-          die("$option seems to be missing");
+          die("PAGE INTROUVABLE");
       }
 ?>
 
