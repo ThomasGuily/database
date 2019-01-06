@@ -8,7 +8,17 @@ Duboquet Florent
 
 Faculté Polytechnique de Mons -2018-2019-
 -->
-﻿<?php require 'header.php'; ?>
+﻿<?php 
+      session_start();
+      
+      if (isset ($_SESSION['connected'])){
+        require 'headerconnect.php';
+      }
+      else {
+        require 'header.php';
+      }
+  
+?>
 
 Ccoucou 
 

@@ -9,6 +9,7 @@ Duboquet Florent
 Faculté Polytechnique de Mons -2018-2019-
 -->
 <!doctype html>
+<?php session_start();?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -97,9 +98,8 @@ Faculté Polytechnique de Mons -2018-2019-
 
                   if ($mysqli->query($sql) === TRUE) {
                     echo "Votre Compte a été créé !";
-                    $bool1 = TRUE ;
-                    echo "<script> location.href='indexconnect.php'; </script>";
-                    return $bool1;
+                    $_SESSION['connected'] = "co";
+                    echo "<script> location.href='index.php'; </script>";
                     exit;
                   } 
                   else {

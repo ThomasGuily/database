@@ -9,8 +9,16 @@ Duboquet Florent
 Faculté Polytechnique de Mons -2018-2019-
 -->
 ﻿
-<?php
-    require "header.php";
+<?php 
+      session_start();
+      
+      if (isset ($_SESSION['connected'])){
+        require 'headerconnect.php';
+      }
+      else {
+        require 'header.php';
+      }
+  
 ?>
 
 
@@ -65,6 +73,8 @@ Faculté Polytechnique de Mons -2018-2019-
             <?php
 
             $products = $DB->query($requete);
+            
+            if (isset ($_SESSION['connected'])){
             foreach( $products as $product )
             {
               echo  "<div class=\"col-lg-3 col-md-4 col-sm-6 portfolio-item\">";
@@ -77,12 +87,29 @@ Faculté Polytechnique de Mons -2018-2019-
               echo              "<h5> Prix: $product->Prix € </h5>";
               echo              "<p class=\"card-text\">  </p>";
               echo              "<a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
-              echo              "";
+              echo              "Ajouter à mon panier";
               echo              "</a>";
               echo          "</div>";
               echo      "</div>";
               echo  "</div>";
             } 
+            }
+            else {
+              foreach( $products as $product ) {
+              echo  "<div class=\"col-lg-3 col-md-4 col-sm-6 portfolio-item\">";
+              echo      "<div class=\"card h-100\">";
+              echo          "<a><img class=\"card-img-top\" src=\"images/pics/Image_Produit$product->ID_produit.jpg\" alt=\"\"></a>";
+              echo          "<div class=\"card-body\">";
+              echo              "<h4 class=\"card-title\">";
+              echo                  "<a> $product->Nom_produit </a>";
+              echo              "</h4>";
+              echo              "<h5> Prix: $product->Prix € </h5>";
+              echo              "<p class=\"card-text\">  </p>";
+              echo              "<a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
+              echo              "</a>";
+              echo          "</div>";
+              echo      "</div>";
+              echo  "</div>";}}
             ?>   
             </div>
             <!-- /.row -->

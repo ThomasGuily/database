@@ -10,6 +10,7 @@ Faculté Polytechnique de Mons -2018-2019-
 -->
 ﻿
 <?php 
+  session_start();
   require 'header.php';
 ?>
 
@@ -47,9 +48,8 @@ Faculté Polytechnique de Mons -2018-2019-
               exit;
             } 
             elseif (password_verify($password, $row[0] )){
-              $bool2 = TRUE ;
-              echo "<script> location.href='indexconnect.php'; </script>";
-              return $bool2 ;
+              $_SESSION['connected'] = "co";
+              echo "<script> location.href='index.php'; </script>";
               exit;
 
             }

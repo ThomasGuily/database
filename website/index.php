@@ -10,7 +10,15 @@ Faculté Polytechnique de Mons -2018-2019-
 -->
 
 <?php 
-      require 'header.php';
+      session_start();
+      
+      if (isset ($_SESSION['connected'])){
+        require 'headerconnect.php';
+      }
+      else {
+        require 'header.php';
+      }
+  
 ?>
     <!-- Page Content -->
     <div class="container">
@@ -73,7 +81,31 @@ Faculté Polytechnique de Mons -2018-2019-
 <?php
     $products = $DB->query('SELECT * FROM `Produit`;');
     foreach( $products as $product)
+
+    if (isset ($_SESSION['connected'])){ 
     {
+      echo   "<div class=\"col-lg-4 col-md-6 mb-4\">";
+      echo   "  <div class=\"card h-100\">";
+      echo   "    <a>";
+      echo   "     <img class=\"card-img-top\" src=\"images/pics/Image_Produit$product->ID_produit.jpg\" alt=\"\">";
+      echo   "    </a>";
+      echo   "     <div class=\"card-body\">";
+      echo   "       <h4 class=\"card-title\">";
+      echo   "         <a> $product->Nom_produit </a>";
+      echo   "       </h4>";
+      echo   "       <h5> Prix: $product->Prix € </h5>";
+      echo   "       <p class=\"card-text\"></p>";
+      echo   "         <a class=\"add\" href=\"addpanier.php?id=$product->ID_produit\">";
+      echo   "            Ajouter au panier";
+      echo   "         </a>";
+      echo   "     </div>";
+      echo   "     <div class=\"card-footer\">";
+      echo   "       <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>";
+      echo   "     </div>";
+      echo   "  </div>";
+      echo   "</div>";
+    } }
+    else {
       echo   "<div class=\"col-lg-4 col-md-6 mb-4\">";
       echo   "  <div class=\"card h-100\">";
       echo   "    <a>";
