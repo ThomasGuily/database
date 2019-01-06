@@ -1,10 +1,6 @@
 
-
 <?php 
-      
       require 'header.php';
-    
-  
 ?>
     <!-- Page Content -->
     <div class="container">
@@ -63,7 +59,7 @@
                 </div>
 
                 <div class="row">
-<!--ITEM 1-->            
+<!--ITEM LIST-->            
 <?php
     $products = $DB->query('SELECT * FROM `Produit`;');
     foreach( $products as $product)
@@ -103,4 +99,6 @@
     </div>
     <!-- /.container -->
     <!-- Footer -->
-    <?php require 'footer.php'; ?>
+<?php 
+  require 'footer.php'; 
+?>

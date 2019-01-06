@@ -1,24 +1,29 @@
 ﻿
-<?php require 'header.php'; ?>
+<?php 
+  require 'header.php';
+?>
 
-
-    <?php
+  <?php
     $verify = false ;
     $mysqli = new mysqli("localhost", "root", "", "biocycle");
     if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error); } ?>
+    die("Connection failed: " . $mysqli->connect_error); }
+  ?>
   
-    <div class="login-page">
+<div class="login-page">
       
-      
-      
-      <div class="form">
-        <form action= '' method = 'post'>
-          <input type="text" placeholder="Username" name = "Username"/>
-          <input type="password" placeholder="Password" name = "Password"/>
-          <input type="submit" value ="Connnexion " validate/>
-          <p class="message">Not registered? <a href = 'create.php' > Create Account  </a></p>
-          <?php
+  <div class="form">
+    <form action= '' method = 'post'>
+      <input type="text" placeholder="Username" name = "Username"/>
+      <input type="password" placeholder="Password" name = "Password"/>
+      <input type="submit" value ="Connnexion " validate/>
+        <p class="message">
+          Not registered? 
+          <a href = 'create.php'> 
+            Create Account  
+          </a>
+        </p>
+        <?php
           
           if (isset($_POST["Username"])){
           $username = $_POST["Username"];
@@ -29,7 +34,6 @@
            
             if(mysqli_num_rows($result)==0){ 
               echo 'Inscrivez vous !' ;
-              #echo "<script> location.href='login.php'; </script>";
               exit;
             } 
             elseif (password_verify($password, $row[0] )){
@@ -40,22 +44,21 @@
 
             }
             else {
-              echo 'Bad password !' ;
-              #echo "<script> location.href='login.php'; </script>";
+              echo 'Bad password !';
               exit;
-          }  
+            }  
           }
           else {
-          $username = "";
-          $password = "";
+            $username = "";
+            $password = "";
           }
-          $mysqli->close(); ?>
+          $mysqli->close();
+        ?>
 
-        </form>
-
-      </div> 
-           
-      
-    </div>
+    </form>
+  </div>       
+</div>
     
-    <?php require 'footer.php'; ?>
+<?php 
+  require 'footer.php';
+?>
