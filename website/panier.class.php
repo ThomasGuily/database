@@ -1,3 +1,13 @@
+<!-- 
+Projet de base de données : BioCycle
+
+Gustavo Magaña López
+Delehouzée Mathis 
+Guily Thomas 
+Duboquet Florent 
+
+Faculté Polytechnique de Mons -2018-2019-
+-->
 <?php   #attention juste avant <!DOCTYPE> pas oublier require 'class_panier.php';  dans header 
 #faire super gaffe qu'il n'y ait pas d'espace entre la balise php et le début et de créer un nouvel objet $panier = new panier()
 

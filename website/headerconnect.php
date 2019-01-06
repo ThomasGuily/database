@@ -1,3 +1,13 @@
+<!-- 
+Projet de base de données : BioCycle
+
+Gustavo Magaña López
+Delehouzée Mathis 
+Guily Thomas 
+Duboquet Florent 
+
+Faculté Polytechnique de Mons -2018-2019-
+-->
 <?php
    include_once 'includes/dbh.inc.php';
    include_once 'includes/dbh.class.php';
